@@ -1,30 +1,6 @@
-// import { Box, Typography } from '@mui/material';
-
-// const RightSidebar = () => {
-//   return (
-//     <Box
-//       width="25%"
-//       p={4}
-//       bgcolor="#2C3930"
-//       color="white"
-//       position="sticky"
-//       top={0}
-//       height="100vh"
-//       display="flex"
-//       alignItems="center"
-//       justifyContent="center"
-//     >
-//       <Typography variant="h6" fontWeight="bold">
-//         Footer Content (Sticky)
-//       </Typography>
-//     </Box>
-//   );
-// };
-
-// export default RightSidebar;
-
-
-import { Box, Typography } from '@mui/material';
+import { Box, Stack } from '@mui/material';
+import FooterCard from '../Footer'; 
+import AdvertisementCard from '../UI/AdvertisementCard';  // Import new Advertisement component
 
 const RightSidebar = () => {
   return (
@@ -36,13 +12,15 @@ const RightSidebar = () => {
       position="sticky"
       top={0}
       height="100vh"
-      display={{ xs: 'none', md: 'flex' }} // Hide on mobile, show on medium+ screens
+      display={{ xs: 'none', md: 'flex' }}
+      flexDirection="column"        // Stack vertically
       alignItems="center"
-      justifyContent="center"
+      justifyContent="space-between" // Space between cards
     >
-      <Typography variant="h6" fontWeight="bold">
-        Footer Content (Sticky)
-      </Typography>
+      <Stack spacing={4} width="100%" alignItems="center">  {/* Vertical stack with spacing */}
+        <AdvertisementCard />       {/* New Advertisement Card */}
+        <FooterCard />              {/* Existing Footer Card */}
+      </Stack>
     </Box>
   );
 };

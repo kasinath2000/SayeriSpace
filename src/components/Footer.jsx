@@ -1,17 +1,43 @@
+import { Card, CardContent, Typography, Link } from '@mui/material';
 
-
-import { Typography } from '@mui/material';
-
-const Footer = () => {
+const FooterCard = () => {
   return (
-    <footer className="backdrop-blur-lg bg-[#B2A5FF]/50 shadow-md text-white p-4 text-center fixed bottom-0 w-full">
-      <Typography variant="body2">
-        © {new Date().getFullYear()} SayeriSpace Website. All rights reserved.
-      </Typography>
-      
-    </footer>
+    <Card 
+      sx={{ 
+        bgcolor: '#3E4E42', 
+        color: 'white', 
+        p: 2, 
+        border: '2px solid #4CAF50', 
+        borderRadius: '16px',
+        textAlign: 'center',
+        // width: '70%',
+        // height: '300px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center' 
+      }}
+    >
+      <CardContent>
+        <Typography variant="body1" gutterBottom sx={{ fontSize: '.8rem' , color:"#A9B5DF" }}>
+          © {new Date().getFullYear()} SayeriSpace. All rights reserved.
+        </Typography>
+        <Typography variant="body2" sx={{ fontSize: '.7rem' ,color:"#A9B5DF"}}>
+          Developed by{' '}
+          <Link 
+            href="https://github.com/kasinath2000" 
+            color="inherit" 
+            underline="hover"
+            target="_blank" 
+            rel="noopener noreferrer"
+            sx={{ fontSize: '.8rem' }}
+          >
+            Kasinath M.
+          </Link>
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };
 
-export default Footer;
-
+export default FooterCard;

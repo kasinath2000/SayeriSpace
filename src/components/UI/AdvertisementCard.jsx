@@ -15,7 +15,7 @@ const AdvertisementCard = () => {
       <CardMedia
         component="img"
         // height="800"
-        height={100}
+        height={200}
         image= {Advertisement}  // Replace with your image URL
         alt="Advertisement"
       />

@@ -4,7 +4,7 @@ export default function Contact() {
       <div>
         <h1 className="text-3xl font-bold">Contact Us</h1>
         <p className="mt-2">
-          For inquiries or feedback, please reach out at: contact@example.com
+          For inquiries or feedback, please reach out at: kasi21.12.2000@gmail.com.com
         </p>
       </div>
     );
